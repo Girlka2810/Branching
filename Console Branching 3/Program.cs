@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Branching;
 namespace Console_Branching_3
 {
     class Program
@@ -12,7 +12,7 @@ namespace Console_Branching_3
             int b = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter C: ");
             int c = Convert.ToInt32(Console.ReadLine());
-            int[] array =Branching.AscendingNumbers.IncreasingNumbers(a, b, c);
+            int[] array =Branching.BranchingMethods.SortInIncreasingNumbers(a, b, c);
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");

@@ -8,7 +8,7 @@ namespace Console_Branching_1
         {
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
-            int c = Branching.CompareAAndBAndSolve.Condition1(a, b);
+            int c = Branching.BranchingMethods.CompareAAndBAndSolve(a, b);
             Console.WriteLine(c);
         }
     }

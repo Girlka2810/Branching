@@ -10,7 +10,7 @@ namespace Console_Branching_2
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter B: ");
             int b = Convert.ToInt32(Console.ReadLine());
-            string c = Branching.SearchForQuater.Quater(a, b);
+            string c = Branching.BranchingMethods.FindQuater(a, b);
             Console.WriteLine(c);
 
 

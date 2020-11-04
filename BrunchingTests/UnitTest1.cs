@@ -11,7 +11,7 @@ namespace BrunchingTests
 
         public void Conditions1(int a, int b, int expected)
         {
-            int actual = Branching.CompareAAndBAndSolve.Condition1(a, b);
+            int actual = Branching.BranchingMethods.CompareAAndBAndSolve(a, b);
             Assert.AreEqual(expected, actual);
         }
         [TestCase(2, 4, "1-st quater")]
@@ -21,21 +21,21 @@ namespace BrunchingTests
 
         public void Quater(int a, int b, string expected)
         {
-            string actual = Branching.SearchForQuater.Quater(a, b);
+            string actual = Branching.BranchingMethods.FindQuater(a, b);
             Assert.AreEqual(expected, actual);
         }
         [Test]
         public void AssendingNumbers1()
         {
             int[] expected = new int[3] { 1, 2, 3 };
-            int[] actual = Branching.AscendingNumbers.IncreasingNumbers(3, 2, 1);
+            int[] actual = Branching.BranchingMethods.SortInIncreasingNumbers(3, 2, 1);
             Assert.AreEqual(expected, actual);
         }
         [Test]
         public void AssendingNumbers2()
         {
             int[] expected = new int[3] { -10, 250, 450 };
-            int[] actual = Branching.AscendingNumbers.IncreasingNumbers(450, 250, -10);
+            int[] actual = Branching.BranchingMethods.SortInIncreasingNumbers(450, 250, -10);
             Assert.AreEqual(expected, actual);
         }
 
@@ -45,7 +45,7 @@ namespace BrunchingTests
         [TestCase(8, 2, 4, "Квадратное уравнение не имеет решений")]
         public void FindDiscriminant(double a, double b, double c, string expected)
         {
-            string actual = Branching.SolveTheQuadraticEquation.FindDiscriminant(a, b, c);
+            string actual = Branching.BranchingMethods.FindDiscriminant(a, b, c);
             Assert.AreEqual(expected, actual);
         }
         [TestCase(11, "Одинадцать ")]
@@ -54,7 +54,7 @@ namespace BrunchingTests
         [TestCase(99, "Девяносто Девять")]
         public void WriteNumber(int a, string expected)
         {
-            string actual = Branching.WriteNumber.IdentifyNumber(a);
+            string actual = Branching.BranchingMethods.IdentifyNumber(a);
             Assert.AreEqual(expected, actual);
         }
         [TestCase(0)]
@@ -65,7 +65,7 @@ namespace BrunchingTests
         {
             try
             {
-                Branching.WriteNumber.IdentifyNumber(a);
+                Branching.BranchingMethods.IdentifyNumber(a);
             }
             catch
             {

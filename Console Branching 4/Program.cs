@@ -12,7 +12,7 @@ namespace Console_Branching_4
             int b = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter C: ");
             int c = Convert.ToInt32(Console.ReadLine());
-            string d = Branching.SolveTheQuadraticEquation.FindDiscriminant(a, b, c);
+            string d = Branching.BranchingMethods.FindDiscriminant(a, b, c);
             Console.WriteLine(d);
         }
     }
